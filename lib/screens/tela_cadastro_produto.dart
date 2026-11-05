@@ -54,6 +54,7 @@ class _TelaCadastroProdutoState extends State<TelaCadastroProduto> {
       body: SafeArea(
         child: Form(
           key: _formKey,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           child: ListView(
             padding: const EdgeInsets.all(20),
             children: [
@@ -144,7 +145,7 @@ class _TelaCadastroProdutoState extends State<TelaCadastroProduto> {
               _buildLabel('Categoria', Icons.category_rounded),
               const SizedBox(height: 8),
               DropdownButtonFormField<Categoria>(
-                initialValue: _categoriaSelecionada,
+                value: _categoriaSelecionada,
                 decoration: _inputDecoration(
                   hint: '',
                   prefixIcon: Icons.category_outlined,
